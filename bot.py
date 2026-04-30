@@ -16,7 +16,7 @@ import asyncio, random, json, sys, re, os
 class dTelecom:
     def __init__(self) -> None:
         self.BASE_API = "https://rewards.dtelecom.org"
-        
+
         self.IDS = {
             "website": "67b55527-30aa-4e73-befc-548d55843c1d",
             "organization": "e2ede0f6-6cf7-4e27-9690-b688a36241fe",
@@ -156,7 +156,7 @@ class dTelecom:
 
         return proxy_url
     
-    def extract_cookies(self, address, response):
+    def extract_cookies(self, address: str, response: object):
         existing = self.accounts[address].get("cookies", {})
         
         jar = SimpleCookie()
@@ -401,6 +401,7 @@ class dTelecom:
             connector, proxy, proxy_auth = self.build_proxy_config(proxy_url)
             try:
                 cookies = self.accounts[address].get("cookies", {})
+                print(cookies)
                 headers = self.initialize_headers(address)
                 params = {
                     "websiteId": self.IDS["website"], 
