@@ -592,9 +592,9 @@ class dTelecom:
                 while delay > 0:
                     formatted_time = self.format_seconds(delay)
                     print(
-                        f"{Fore.CYAN+Style.BRIGHT}[ Wait{Style.RESET_ALL}"
+                        f"{Fore.CYAN+Style.BRIGHT}[ Wait for{Style.RESET_ALL}"
                         f"{Fore.WHITE+Style.BRIGHT} {formatted_time} {Style.RESET_ALL}"
-                        f"{Fore.CYAN+Style.BRIGHT}... ]{Style.RESET_ALL}"
+                        f"{Fore.CYAN+Style.BRIGHT}]{Style.RESET_ALL}"
                         f"{Fore.WHITE+Style.BRIGHT} | {Style.RESET_ALL}"
                         f"{Fore.BLUE+Style.BRIGHT}All Accounts Have Been Processed...{Style.RESET_ALL}",
                         end="\r",
