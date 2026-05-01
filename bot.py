@@ -401,7 +401,6 @@ class dTelecom:
             connector, proxy, proxy_auth = self.build_proxy_config(proxy_url)
             try:
                 cookies = self.accounts[address].get("cookies", {})
-                print(cookies)
                 headers = self.initialize_headers(address)
                 params = {
                     "websiteId": self.IDS["website"], 
